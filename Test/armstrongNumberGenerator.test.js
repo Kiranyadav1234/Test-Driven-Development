@@ -20,6 +20,6 @@ describe("isArmstrong function",()=>{
     {
         
         expect(()=>{obj.findArmstrongNumber("Hey")}).toThrow("Invalid Input");
-    }); 
+    });
 
 })
