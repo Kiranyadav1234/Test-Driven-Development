@@ -16,10 +16,25 @@ describe("isArmstrong function",()=>{
         
         expect(()=>{obj.isArmstrongNumber("Hey")}).toThrow("Invalid Input");
     }); 
-    it("should throw an invalid input error if the given data is string  ",function()
-    {
-        
-        expect(()=>{obj.findArmstrongNumber("Hey")}).toThrow("Invalid Input");
-    });
+    it('should throw invalid input when array is given as input', () => {
+        expect(
+        () => obj.isArmstrongNumber([1,2])
+        ).toThrow('Not a valid input type.')
+      })
+    it('should throw invalid input when boolean is given as input', () => {
+        expect(
+        () => obj.isArmstrongNumber(true)
+        ).toThrow('Not a valid input type.')
+      })
+    /* it('should throw invalid input when decimal number is given as input', () => {
+        expect(
+        () => obj.isArmstrongNumber(3.5)
+        ).toThrow('Not a valid input type.')
+      }) */
+    it('should throw invalid input when negative number is given as input', () => {
+        expect(
+        () =>obj.isArmstrongNumberr(-5)
+        ).toThrow('Negative number is an invalid input.')
+      })
 
 })
