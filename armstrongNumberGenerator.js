@@ -19,6 +19,14 @@ function isArmstrongNumber(number)
     {
        throw  new Error("Invalid Input");
     }
+    if(Array.isArray(number))
+    {
+        throw new Error("Invalid input");
+    }
+    if(number<0)
+    {
+        throw new Error("Invalid input");
+    }
     let temp = number;
     let sum = 0;
     while(temp>0)
